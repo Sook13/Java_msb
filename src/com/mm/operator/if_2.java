@@ -1,4 +1,4 @@
-package com.mm.test01;
+package com.mm.operator;
 
 import java.util.Scanner;
 

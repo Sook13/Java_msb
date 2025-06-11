@@ -1,4 +1,4 @@
-package com.mm.test03;
+package com.mm.CWL;
 
 import java.util.Arrays;
 import java.util.Scanner;
