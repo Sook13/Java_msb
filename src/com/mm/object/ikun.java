@@ -8,6 +8,6 @@ package com.mm.object;
  */
 public class ikun {
 	public static void main(String[] args) {
-		Person ikun = new Person();
+		com.mm.Person ikun = new com.mm.Person();
 	}
 }
