@@ -18,7 +18,7 @@ public class Person {
 	//吃饭
 	public void eat(){
 		int num = 10;//局部变量：放在方法中 必须有初始值
-		System.out.println("我喜欢吃饭");
+		System.out.println("我喜欢唱跳rap篮球");
 	}
 	//睡觉：
 	public void sleep(String address){

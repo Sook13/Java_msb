@@ -258,3 +258,67 @@ public class CWL {
     }
 }
 ```
+
+## 面向对象
+
+```java
+package com.mm.object;
+
+/**
+ * @Author: Sy
+ * @Date: 2025/6/10 - 06 - 10 - 17:39
+ * @Description: com.mm.test03.object
+ * @Version: 1.0
+ */
+public class Person {
+	//名词---》属性---》成员变量---》放在类中方法外（注意：我们只把有需要的内容写到代码里，不相关的东西不要放在代码中）
+	int age ;//年龄
+	String name;//姓名
+	double height;//身高
+	double weight;//体重
+	String hobby;//爱好
+	String gender;//性别
+	//动词---》方法
+	//吃饭
+	public void eat(){
+		int num = 10;//局部变量：放在方法中 必须有初始值
+		System.out.println("我喜欢唱跳rap篮球");
+	}
+	//睡觉：
+	public void sleep(String address){
+		System.out.println("我在"+address+"睡觉");
+	}
+	//自我介绍：
+	public String introduce(){
+		return "我的名字是："+name+"，我的年龄是："+age+",我的身高是："+height+",我的体重是："+weight+",我的性别是: "+gender+",我的爱好是: "+hobby;
+	}
+}
+```
+
+```java
+package com.mm.object;
+
+/**
+ * @Author: Sy
+ * @Date: 2025/6/11 - 06 - 11 - 15:03
+ * @Description: com.mm.object
+ * @Version: 1.0
+ */
+
+public class ikun {
+	public static void main(String[] args) {
+	Person kunkun = new Person();
+	//名词--》静态特性--》属性
+	kunkun.name = "蔡徐坤";
+	kunkun.age = 27;
+	kunkun.height = 183.3;//cm
+	kunkun.weight = 60.0;//kg
+	kunkun.gender = "man";//一个真正的鳗
+	kunkun.hobby =  "music";//唱跳rap篮球
+	//动词--》动态特性--》方法
+	kunkun.eat();
+	kunkun.sleep("家里");
+	}
+}
+
+```
