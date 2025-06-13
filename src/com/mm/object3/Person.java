@@ -17,4 +17,9 @@ public class Person {
 	public void eat() {
 		System.out.println(this); //确认this 指代的对象 当前正在构建的对象
 		System.out.println("I have lunch.");}
+	public void sleep() {
+		int age = 23;
+		System.out.println(age);
+		System.out.println(this.age);
+		}
 }

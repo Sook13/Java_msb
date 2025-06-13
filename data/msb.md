@@ -327,7 +327,7 @@ public class ikun {
 成员变量：类中方法外定义的变量
 局部变量：方法中定义的变量  代码块中定义的变量
 
-```
+```java
 package com.mm.object;
 
 /**
@@ -378,3 +378,53 @@ public class Student {
     }
 }
 ```
+
+```java
+package com.mm.object3;
+
+/**
+ * @Author: Sy
+ * @Date: 2025/6/13 - 06 - 13 - 09:20
+ * @Description: com.mm.object3
+ * @Version: 1.0
+ */
+public class Person {
+	int age;
+	String name;
+	public Person(int a, String b) {
+		System.out.println(this); //确认this 指代的对象 当前正在构建的对象
+		age = a;
+		name = b;
+	}
+	public void eat() {
+		System.out.println(this); //确认this 指代的对象 当前正在构建的对象
+		System.out.println("I have lunch.");}
+	public void sleep() {
+		int age = 23;
+		System.out.println(age);
+		System.out.println(this.age);
+		}
+}
+```
+
+```java
+package com.mm.object3;
+
+import java.sql.SQLOutput;
+
+/**
+ * @Author: Sy
+ * @Date: 2025/6/13 - 06 - 13 - 09:22
+ * @Description: com.mm.object3
+ * @Version: 1.0
+ */
+public class Test {
+	public static void main(String[] args) {
+		Person p = new Person(10,"msb");//确认this 指代的对象 当前正在构建的对象
+		System.out.println(p);
+		p.eat();
+		p.sleep();
+	}
+}
+```
+

@@ -13,5 +13,6 @@ public class Test {
 		Person p = new Person(10,"msb");//确认this 指代的对象 当前正在构建的对象
 		System.out.println(p);
 		p.eat();
+		p.sleep();
 	}
 }
