@@ -327,7 +327,7 @@ public class ikun {
 成员变量：类中方法外定义的变量
 局部变量：方法中定义的变量  代码块中定义的变量
 
-```
+```java
 package com.mm.object;
 
 /**
@@ -378,3 +378,33 @@ public class Student {
     }
 }
 ```
+
+## 包
+
+包名定义：
+（1）名字全部小写
+（2）中间用.隔开
+（3）一般都是公司域名倒着写 ：  
+
+```
+com.jd   com.msb
+```
+
+（4）加上模块名字：
+
+```
+com.jd.login    com.jd.register
+```
+
+（5）不能使用系统中的关键字：
+
+```
+nul,con,com1---com9.....
+```
+
+（6）包声明的位置一般都在非注释性代码的第一行：
+
+![image-20250616213542075](https://gitee.com/Sook13/images/raw/master/image-20250616213542075.png)
+
+## String
+
