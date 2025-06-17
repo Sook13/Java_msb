@@ -17,7 +17,8 @@ import java.util.Scanner;
 	//  数组长度有限->选择ArrayList
 		private ArrayList<Account> accounts = new ArrayList<>();
 		private Scanner sc = new Scanner(System.in);
-
+	//  声明登录账户
+		Account loginAccount;
 	/*
 	* 展示首页
 	* */
@@ -129,6 +130,7 @@ import java.util.Scanner;
 				String password = sc.next();
 				if (ac.getPassword().equals(password)) {
 					System.out.println("密码正确,成功登录!");
+					loginAccount = ac;
 					//用户UI
 					UserInterface();
 					break;
@@ -152,6 +154,7 @@ import java.util.Scanner;
 			int choice = sc.nextInt();
 			switch (choice){
 				case 1:
+					showLoginAccount();
 					break;
 				case 2:
 					break;
@@ -162,7 +165,8 @@ import java.util.Scanner;
 				case 5:
 					break;
 				case 6:
-					break;
+					System.out.println("<"+loginAccount.getName()+">用户已退出账户!");
+					return;//退出的是用户界面
 				case 7:
 					break;
 				default:
@@ -171,4 +175,14 @@ import java.util.Scanner;
 			}
 		}
 	}
+
+	private void showLoginAccount() {
+		System.out.println("==用户信息展示：==");
+		System.out.println("卡号：" + loginAccount.getCardID());
+		System.out.println("姓名：" + loginAccount.getName());
+		System.out.println("身份证号：" + loginAccount.getIDNumber());
+		System.out.println("余额：" + loginAccount.getMoney());
+		System.out.println("取款限额：" + loginAccount.getLimit());
+	}
+
 }
