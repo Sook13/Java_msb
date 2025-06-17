@@ -1,5 +1,7 @@
 package com.mm.testString;
 
+import java.util.Arrays;
+
 /**
  * @Author: Sy
  * @Date: 2025/6/16 - 06 - 16 - 21:51
@@ -28,6 +30,19 @@ public class test2 {
 	String s6 = "hello,my new world.";
 	System.out.println(s6.substring(2));
 	System.out.println(s6.substring(2,5));
-	//
+	//toUpperCase
+	String s7 = "three pigs ";
+	System.out.println(s7.toUpperCase());
+	//toLowerCase
+	String s8 = "APPLE EATEN BY BIRDS";
+	System.out.println(s8.toLowerCase());
+	//trim 去除首尾的空格
+	String s9 = "  pink-dog-is-a-dog red dog  ";
+	System.out.println(s9.trim());
+	//split ->String[]
+	String[] strArr = s9.split("-");
+	System.out.println(Arrays.toString(strArr));
+	//valueOf int -> Str
+	System.out.println(String.valueOf(226));
 	}
 }
