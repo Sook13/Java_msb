@@ -28,7 +28,7 @@ import java.util.Scanner;
 			System.out.println("1.用户登录");
 			System.out.println("2.用户开户");
 			//接受录入int
-			System.out.println("请录入你要选择的功能: ");
+			System.out.println("请录入您要选择的功能: ");
 			int choice = sc.nextInt();
 			switch(choice){
 				case 1:
@@ -160,6 +160,7 @@ import java.util.Scanner;
 					SaveMoney();
 					break;
 				case 3:
+					WithdrawMoney();
 					break;
 				case 4:
 					break;
@@ -177,11 +178,31 @@ import java.util.Scanner;
 		}
 	}
 
-	private void SaveMoney() {
-		System.out.println("进入存款系统: ");
-		System.out.println("请录入你要存款的金额: ");
-		double amount = sc.nextDouble();
+	private void WithdrawMoney() {
+		System.out.println("-->进入取款系统");
+		while (true) {
+			System.out.println("请录入您要取款的金额");
+			double money = sc.nextDouble();
+			if (money <= loginAccount.getMoney()) {
+				if (money > loginAccount.getLimit()) {
+					System.out.println("您一次性取钱超过限额,无法取款!");}
+				loginAccount.setMoney(loginAccount.getMoney() - money);
+				System.out.println("余额充足,可以取钱!您取了"+money+"元.您的余额为:"+loginAccount.getMoney());
+				break;
+			}else {
+				System.out.println("您的余额为: "+loginAccount.getMoney()+",不能取出"+money);
 
+			}
+		}
+
+	}
+
+	private void SaveMoney() {
+		System.out.println("-->进入存款系统");
+		System.out.println("请录入您要存款的金额: ");
+		double amount = sc.nextDouble();
+		loginAccount.setMoney(loginAccount.getMoney()+amount);
+		System.out.println("您已存入"+amount+"元,当前账户余额为: " + loginAccount.getMoney());
 	}
 
 	private void showLoginAccount() {
