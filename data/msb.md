@@ -379,52 +379,32 @@ public class Student {
 }
 ```
 
-```java
-package com.mm.object3;
+## 包
 
-/**
- * @Author: Sy
- * @Date: 2025/6/13 - 06 - 13 - 09:20
- * @Description: com.mm.object3
- * @Version: 1.0
- */
-public class Person {
-	int age;
-	String name;
-	public Person(int a, String b) {
-		System.out.println(this); //确认this 指代的对象 当前正在构建的对象
-		age = a;
-		name = b;
-	}
-	public void eat() {
-		System.out.println(this); //确认this 指代的对象 当前正在构建的对象
-		System.out.println("I have lunch.");}
-	public void sleep() {
-		int age = 23;
-		System.out.println(age);
-		System.out.println(this.age);
-		}
-}
+包名定义：
+（1）名字全部小写
+（2）中间用.隔开
+（3）一般都是公司域名倒着写 ：  
+
+```
+com.jd   com.msb
 ```
 
-```java
-package com.mm.object3;
+（4）加上模块名字：
 
-import java.sql.SQLOutput;
-
-/**
- * @Author: Sy
- * @Date: 2025/6/13 - 06 - 13 - 09:22
- * @Description: com.mm.object3
- * @Version: 1.0
- */
-public class Test {
-	public static void main(String[] args) {
-		Person p = new Person(10,"msb");//确认this 指代的对象 当前正在构建的对象
-		System.out.println(p);
-		p.eat();
-		p.sleep();
-	}
-}
 ```
+com.jd.login    com.jd.register
+```
+
+（5）不能使用系统中的关键字：
+
+```
+nul,con,com1---com9.....
+```
+
+（6）包声明的位置一般都在非注释性代码的第一行：
+
+![image-20250616213542075](https://gitee.com/Sook13/images/raw/master/image-20250616213542075.png)
+
+## String
 
