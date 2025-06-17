@@ -157,6 +157,7 @@ import java.util.Scanner;
 					showLoginAccount();
 					break;
 				case 2:
+					SaveMoney();
 					break;
 				case 3:
 					break;
@@ -174,6 +175,13 @@ import java.util.Scanner;
 					break;
 			}
 		}
+	}
+
+	private void SaveMoney() {
+		System.out.println("进入存款系统: ");
+		System.out.println("请录入你要存款的金额: ");
+		double amount = sc.nextDouble();
+
 	}
 
 	private void showLoginAccount() {
