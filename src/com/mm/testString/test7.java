@@ -14,9 +14,9 @@ public class test7 {
 		Person p1 = new Person("yoo",23,"西海岸",213.2,234);
 		list.add(p1);
 		//匿名对象
-		list.add(new Person("sk"));
+		list.add(new Person("sk",23,"西海岸",213.2,234));
 		for (Person p: list){
-			System.out.println(p.getName()+"\t年龄: "+p.getAge()+"\t地址: "+p.getAddress()+"\t身高: "+p.getHeight()+"\t体重: "+p.getWeight());
+			System.out.println(p.getName()+"\t年龄:\t"+p.getAge()+"\t地址:\t"+p.getAddress()+"\t身高:\t"+p.getHeight()+"\t体重:\t"+p.getWeight());
 		}
 	}
 }
