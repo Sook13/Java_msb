@@ -92,6 +92,7 @@ import java.util.Scanner;
 	/*
 	* 判断卡号是否与已有的重复
 	* @param cardID
+	* return account / null
 	* */
 		for (int i = 0; i < accounts.size(); i++) {
 			Account account = accounts.get(i);
@@ -163,6 +164,7 @@ import java.util.Scanner;
 					WithdrawMoney();
 					break;
 				case 4:
+					TransferMoney();
 					break;
 				case 5:
 					break;
@@ -174,6 +176,45 @@ import java.util.Scanner;
 				default:
 					System.out.println("输入有误!");
 					break;
+			}
+		}
+	}
+
+	private void TransferMoney() {
+	//判断系统中是否有其他的账户
+	if (accounts.size() < 2){
+		System.out.println("当前系统仅有1位账户,无法完成转账操作!");
+		return;//停止当前方法
+		}
+	if (loginAccount.getMoney() == 0){
+		System.out.println("该账户存款余额为0,无法完成转账操作!");
+		return;
+		}
+		System.out.println("请输入对方的卡号: ");
+		String cardID = sc.next();
+		Account ac = isExist(cardID);
+		if (ac == null){
+			System.out.println("对方账户是空号!");
+			}else {
+			System.out.println("卡号正确!");
+			String name = "**" + ac.getName().substring(ac.getName().length()-1);//获取名字最后一位字与**拼接
+			System.out.println("请录入<"+name+">完整姓名: ");
+			String PrintName = sc.next();
+			if (PrintName.equals(ac.getName())) {
+				System.out.println("姓名相符!");
+				while (true) {
+					System.out.println("请输入您要转账的金额: ");
+					double amount = sc.nextDouble();
+					if (loginAccount.getMoney() >= amount){
+						loginAccount.setMoney(loginAccount.getMoney() - amount);//当前账户扣除转账的金额
+						ac.setMoney(ac.getMoney() + amount);//对方账户得到金额
+						break;
+						}else {
+						System.out.println("余额不足!"+"\t余额: "+loginAccount.getMoney());
+					}
+				}
+			}else {
+				System.out.println("姓名不匹配!");
 			}
 		}
 	}
@@ -191,7 +232,6 @@ import java.util.Scanner;
 				break;
 			}else {
 				System.out.println("您的余额为: "+loginAccount.getMoney()+",不能取出"+money);
-
 			}
 		}
 
@@ -213,6 +253,4 @@ import java.util.Scanner;
 		System.out.println("余额：" + loginAccount.getMoney());
 		System.out.println("取款限额：" + loginAccount.getLimit());
 	}
-
-
 }
