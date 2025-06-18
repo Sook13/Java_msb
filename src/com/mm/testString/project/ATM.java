@@ -165,6 +165,7 @@ import java.util.Scanner;
 					TransferMoney();
 					break;
 				case 5:
+					UpdatePassword();
 					break;
 				case 6:
 					System.out.println("<"+loginAccount.getName()+">用户已退出账户!");
@@ -176,6 +177,18 @@ import java.util.Scanner;
 					break;
 			}
 		}
+	}
+
+	private void UpdatePassword() {
+	//修改密码:
+	//1.认证用户当前密码是否正确
+	//2.开始修改密码:输入两次密码是否一致
+	//3.两次相同,成功修改.两次不同,重新修改.
+		System.out.println("==欢迎使用密码修改功能==");
+		System.out.println("请输入您的密码: ");
+		String password = sc.next();
+		//校验密码
+		
 	}
 
 	private void TransferMoney() {
@@ -234,7 +247,6 @@ import java.util.Scanner;
 				break;
 			}
 		}
-
 	}
 
 	private void SaveMoney() {
