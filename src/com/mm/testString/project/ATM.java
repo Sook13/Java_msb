@@ -208,6 +208,7 @@ import java.util.Scanner;
 					if (loginAccount.getMoney() >= amount){
 						loginAccount.setMoney(loginAccount.getMoney() - amount);//当前账户扣除转账的金额
 						ac.setMoney(ac.getMoney() + amount);//对方账户得到金额
+						System.out.println("转账成功!");
 						break;
 						}else {
 						System.out.println("余额不足!"+"\t余额: "+loginAccount.getMoney());
@@ -232,6 +233,7 @@ import java.util.Scanner;
 				break;
 			}else {
 				System.out.println("您的余额为: "+loginAccount.getMoney()+",不能取出"+money);
+				break;
 			}
 		}
 
