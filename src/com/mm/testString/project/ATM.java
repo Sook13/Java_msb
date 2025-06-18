@@ -1,6 +1,5 @@
 package com.mm.testString.project;
 
-import com.sun.source.tree.WhileLoopTree;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -34,7 +33,6 @@ import java.util.Scanner;
 				case 1:
 					System.out.println("进入登录功能");
 					Login();
-
 					break;
 				case 2:
 					System.out.println("进入开户功能");
