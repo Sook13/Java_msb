@@ -40,8 +40,13 @@ public class Student {
 		return gender;
 	}
 
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setGender(String gender) throws Exception {
+		if (gender.equals("男")||gender.equals("女")) {
+			this.gender = gender;
+		} else {
+//		throw new RuntimeException("Man! What can I say?");
+		throw new Exception();
+		}
 	}
 
 	@Override
