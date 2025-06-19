@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java_msb.iml" filepath="$PROJECT_DIR$/.idea/Java_msb.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestException/TestException.iml" filepath="$PROJECT_DIR$/TestException/TestException.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestPackage/TestPackage.iml" filepath="$PROJECT_DIR$/TestPackage/TestPackage.iml" />
     </modules>
   </component>
 </project>
