@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java_msb.iml" filepath="$PROJECT_DIR$/.idea/Java_msb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestException/TestException.iml" filepath="$PROJECT_DIR$/TestException/TestException.iml" />
     </modules>
   </component>
 </project>
