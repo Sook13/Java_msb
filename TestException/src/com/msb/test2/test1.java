@@ -9,7 +9,7 @@ package com.msb.test2;
 public class test1 {
 	public static void main(String[] args) throws Exception {
 		Student s1 = new Student();
-		s1.setName("菲菲");
+		s1.setName("feo");
 		s1.setAge(19);
 		s1.setGender("m");
 		System.out.println(s1);
