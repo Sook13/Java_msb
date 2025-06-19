@@ -406,5 +406,7 @@ nul,con,com1---com9.....
 
 ![image-20250616213542075](https://gitee.com/Sook13/images/raw/master/image-20250616213542075.png)
 
-## String
+## Exception异常
+
+![image-20250619114426184](https://gitee.com/Sook13/images/raw/master/image-20250619114426184.png)
 
