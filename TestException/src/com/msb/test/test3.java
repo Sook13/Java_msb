@@ -20,6 +20,7 @@ public class test3 {
 			Scanner sc1 = new Scanner(System.in);
 			int b = sc1.nextInt();
 			System.out.println("两数之商为: "+a/b);
+			return;
 		} catch (Exception e) {
 			//第一种处理方式:什么都不输出
 
@@ -31,9 +32,9 @@ public class test3 {
 //			e.printStackTrace();
 // 显示异常的堆栈信息:将异常信息捕获以后,在控制台将异常的信息展示
 			throw e;//抛出异常
-		}
-		System.out.println();
-		System.out.println("请重新运行!");
+		}finally{
+			System.out.println("请重新运行!");
+		 }
 	}
 }
 //把可能出现异常的代码放入try代码块中，然后将异常封装为对象，被catch后面的()中的那个异常对象接收，
