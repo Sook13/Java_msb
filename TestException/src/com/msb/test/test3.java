@@ -30,7 +30,7 @@ public class test3 {
 //			System.out.println(e.getMessage());
 //			e.printStackTrace();
 // 显示异常的堆栈信息:将异常信息捕获以后,在控制台将异常的信息展示
-			throw e;
+			throw e;//抛出异常
 		}
 		System.out.println();
 		System.out.println("请重新运行!");
