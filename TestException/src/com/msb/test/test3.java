@@ -1,5 +1,7 @@
 package com.msb.test;
 
+import javax.swing.*;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 //测试异常
 
@@ -21,18 +23,23 @@ public class test3 {
 			int b = sc1.nextInt();
 			System.out.println("两数之商为: "+a/b);
 			return;
-		} catch (Exception e) {
+		} catch (InputMismatchException ex) {
 			//第一种处理方式:什么都不输出
 
 			//第二种处理方式:输出自定义异常信息
-			//System.out.println("出错");
+			//  System.out.println("出错");
 			//第三种处理方式:打印异常信息
-//			System.out.println(e);
-//			System.out.println(e.getMessage());
-//			e.printStackTrace();
-// 显示异常的堆栈信息:将异常信息捕获以后,在控制台将异常的信息展示
-			throw e;//抛出异常
-		}finally{
+			//	System.out.println(e);
+			//	System.out.println(e.getMessage());
+			//	e.printStackTrace();
+			//显示异常的堆栈信息:将异常信息捕获以后,在控制台将异常的信息展示
+			//throw ex;//抛出异常
+			System.out.println("对不起您输入的不是int数据类型!");
+		}   catch(ArithmeticException ex) {
+			System.out.println("除0");
+		}
+		finally{
+			System.out.println();
 			System.out.println("请重新运行!");
 		 }
 	}
