@@ -171,10 +171,37 @@ import java.util.Scanner;
 					System.out.println("<"+loginAccount.getName()+">用户已退出账户!");
 					return;//退出的是用户界面
 				case 7:
+					//销户
+					if (DeleteAccount()) {
+						System.out.println("销户成功!-->将返回用户操作界面");
+						return;
+					}
 					break;
 				default:
 					System.out.println("输入有误!");
 					break;
+			}
+		}
+	}
+
+	private boolean DeleteAccount() {
+		System.out.println("==进入销户功能==");
+		while (true) {
+			System.out.println("请确认是否进行销户: Y or N");
+			String choice = sc.next();
+			switch (choice){
+			case "Y":
+				if (loginAccount.getMoney()==0) {
+					accounts.remove(loginAccount);
+					return true;
+				} else{
+					System.out.println("余额不为0,不能直接销户!");
+					return false;
+				}
+			case "N":
+				System.out.println("好的,保留您的账户!");
+				return false;
+			default:
 			}
 		}
 	}
