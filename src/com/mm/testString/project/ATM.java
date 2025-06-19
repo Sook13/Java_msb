@@ -188,7 +188,21 @@ import java.util.Scanner;
 		System.out.println("请输入您的密码: ");
 		String password = sc.next();
 		//校验密码
-		
+		if (password.equals(loginAccount.getPassword())) {
+			while (true) {
+				System.out.println("录入新的密码: ");
+				String newPassword = sc.next();
+				System.out.println("请再录入一次密码: ");
+				String twicePassword = sc.next();
+				if(newPassword.equals(twicePassword)) {
+					loginAccount.setPassword(twicePassword);
+					return;
+					}
+					else {
+					System.out.println("两次密码不一致!");
+				}
+			}
+		}
 	}
 
 	private void TransferMoney() {
