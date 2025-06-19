@@ -1,4 +1,4 @@
-package com.msb.test;
+package com.msb.test1;
 
 import java.util.Scanner;
 /*

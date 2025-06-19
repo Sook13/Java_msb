@@ -1,6 +1,5 @@
-package com.msb.test;
+package com.msb.test1;
 
-import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 //测试异常
