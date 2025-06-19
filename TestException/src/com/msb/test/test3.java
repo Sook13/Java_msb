@@ -21,7 +21,16 @@ public class test3 {
 			int b = sc1.nextInt();
 			System.out.println("两数之商为: "+a/b);
 		} catch (Exception e) {
-			System.out.println("出错");
+			//第一种处理方式:什么都不输出
+
+			//第二种处理方式:输出自定义异常信息
+			//System.out.println("出错");
+			//第三种处理方式:打印异常信息
+//			System.out.println(e);
+//			System.out.println(e.getMessage());
+//			e.printStackTrace();
+// 显示异常的堆栈信息:将异常信息捕获以后,在控制台将异常的信息展示
+			throw e;
 		}
 		System.out.println();
 		System.out.println("请重新运行!");
