@@ -18,5 +18,10 @@ public class test2 {
 		Integer i3 = new Integer("12");
 		int num2 = i3;
 		System.out.println(num2);
+//		Integer i4 = new Integer("avx");
+//		System.out.println(i4);
+		Integer i5 = Integer.valueOf(12);
+		System.out.println(i5);
+		System.out.println(i5.toString());
 	}
 }
