@@ -45,8 +45,6 @@ public class Date7 {
 		//String -->LocalDateTime
 		TemporalAccessor parse3 = dtf3.parse(str3);
 		System.out.println(parse3);
-
 	}
-
 
 }
