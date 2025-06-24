@@ -1,6 +1,7 @@
 package com.msb.date1;
 
-import sun.util.resources.cldr.nn.CalendarData_nn_NO;
+//import sun.util.resources.cldr.nn.CalendarData_nn_NO;
+
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
