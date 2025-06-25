@@ -26,7 +26,7 @@ public class date5project {
 		calendar.setTime(date1);
 		//获取最大天数
 		int max = calendar.getActualMaximum(Calendar.DATE);
-		//获取今天日期
+		//获取\今天日期
 		int today = calendar.get(Calendar.DATE);
 		System.out.println();
 		//设置本月第一天
